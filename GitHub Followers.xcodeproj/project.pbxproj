@@ -41,6 +41,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		841B150229024D9E00EF53E7 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				841B14FE28FF86E500EF53E7 /* GFButton.swift */,
+				841B150028FF8BC300EF53E7 /* GFTextfield.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		841B150329024DC500EF53E7 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8480C75F28F6727200A42B45 /* SearchVC.swift */,
+				8480C76128F6729C00A42B45 /* FavoritesListVC.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
 		8480C73F28F64A3000A42B45 = {
 			isa = PBXGroup;
 			children = (
@@ -62,13 +80,11 @@
 			children = (
 				8480C74B28F64A3000A42B45 /* AppDelegate.swift */,
 				8480C74D28F64A3000A42B45 /* SceneDelegate.swift */,
-				8480C75F28F6727200A42B45 /* SearchVC.swift */,
-				8480C76128F6729C00A42B45 /* FavoritesListVC.swift */,
+				841B150329024DC500EF53E7 /* View Controllers */,
 				8480C75428F64A3100A42B45 /* Assets.xcassets */,
 				8480C75628F64A3100A42B45 /* LaunchScreen.storyboard */,
 				8480C75928F64A3100A42B45 /* Info.plist */,
-				841B14FE28FF86E500EF53E7 /* GFButton.swift */,
-				841B150028FF8BC300EF53E7 /* GFTextfield.swift */,
+				841B150229024D9E00EF53E7 /* Components */,
 			);
 			path = "GitHub Followers";
 			sourceTree = "<group>";
