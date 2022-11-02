@@ -18,6 +18,7 @@ class GFTextfield: UITextField {
         layer.borderWidth = 2
         layer.borderColor = UIColor.systemGray4.cgColor
         
+        returnKeyType = .go
         textColor = .label
         tintColor = .label
         textAlignment = .center

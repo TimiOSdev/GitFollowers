@@ -13,6 +13,10 @@ class SearchVC: UIViewController {
     let imageView = UIImageView()
     let userNameTextField = GFTextfield()
     let callToActionButton = GFButton(backgroundColor: .systemGreen, title: "Get Followers")
+    
+    var isUserNameEmpty : Bool {
+        return !userNameTextField.text!.isEmpty
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +30,14 @@ class SearchVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = true
+    }
+    
+    @objc func pushToFollowersViewController() {
+        guard isUserNameEmpty else { return }
+        let followersVC = FollowerListViewController()
+        followersVC.userName = userNameTextField.text
+        followersVC.title = userNameTextField.text
+        navigationController?.pushViewController(followersVC, animated: true)
     }
     
     func createTapGestureReconizer() {
@@ -48,7 +60,7 @@ class SearchVC: UIViewController {
     
     func configureUserNameTextField() {
         view.addSubview(userNameTextField)
-        
+        userNameTextField.delegate = self
         NSLayoutConstraint.activate([
             userNameTextField.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 50),
             userNameTextField.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 30),
@@ -59,7 +71,7 @@ class SearchVC: UIViewController {
     
     func configureButton() {
         view.addSubview(callToActionButton)
-        
+        callToActionButton.addTarget(self, action: #selector(pushToFollowersViewController), for: .touchUpInside)
         NSLayoutConstraint.activate([
 
             callToActionButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50),
@@ -68,6 +80,17 @@ class SearchVC: UIViewController {
             callToActionButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
             callToActionButton.heightAnchor.constraint(equalToConstant: 50)
         ])
+    }
+}
+
+extension SearchVC: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        guard isUserNameEmpty else {
+            return true
+        }
+        userNameTextField.resignFirstResponder()
+        pushToFollowersViewController()
+        return true
     }
 }
 

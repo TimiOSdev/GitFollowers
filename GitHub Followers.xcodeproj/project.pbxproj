@@ -15,6 +15,7 @@
 		8480C75828F64A3100A42B45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8480C75628F64A3100A42B45 /* LaunchScreen.storyboard */; };
 		8480C76028F6727200A42B45 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480C75F28F6727200A42B45 /* SearchVC.swift */; };
 		8480C76228F6729C00A42B45 /* FavoritesListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480C76128F6729C00A42B45 /* FavoritesListVC.swift */; };
+		84CE94852911F5B200EA7C43 /* FollowerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE94842911F5B200EA7C43 /* FollowerListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		8480C75928F64A3100A42B45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8480C75F28F6727200A42B45 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		8480C76128F6729C00A42B45 /* FavoritesListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListVC.swift; sourceTree = "<group>"; };
+		84CE94842911F5B200EA7C43 /* FollowerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 		841B150329024DC500EF53E7 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				84CE94842911F5B200EA7C43 /* FollowerListViewController.swift */,
 				8480C75F28F6727200A42B45 /* SearchVC.swift */,
 				8480C76128F6729C00A42B45 /* FavoritesListVC.swift */,
 			);
@@ -162,6 +165,7 @@
 				841B150128FF8BC300EF53E7 /* GFTextfield.swift in Sources */,
 				8480C76228F6729C00A42B45 /* FavoritesListVC.swift in Sources */,
 				841B14FF28FF86E500EF53E7 /* GFButton.swift in Sources */,
+				84CE94852911F5B200EA7C43 /* FollowerListViewController.swift in Sources */,
 				8480C76028F6727200A42B45 /* SearchVC.swift in Sources */,
 				8480C74C28F64A3000A42B45 /* AppDelegate.swift in Sources */,
 				8480C74E28F64A3000A42B45 /* SceneDelegate.swift in Sources */,
